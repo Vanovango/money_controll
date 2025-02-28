@@ -1,0 +1,56 @@
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_StartWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(284, 353)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(0, 110, 281, 241))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.btn_add_new = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_add_new.setFont(font)
+        self.btn_add_new.setObjectName("btn_add_new")
+        self.verticalLayout.addWidget(self.btn_add_new)
+        self.btn_result = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_result.setFont(font)
+        self.btn_result.setObjectName("btn_result")
+        self.verticalLayout.addWidget(self.btn_result)
+        self.btn_balance = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_balance.setFont(font)
+        self.btn_balance.setObjectName("btn_balance")
+        self.verticalLayout.addWidget(self.btn_balance)
+        self.btn_exit = QtWidgets.QPushButton(self.verticalLayoutWidget)
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.btn_exit.setFont(font)
+        self.btn_exit.setObjectName("btn_exit")
+        self.verticalLayout.addWidget(self.btn_exit)
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(0, 0, 281, 101))
+        self.label.setObjectName("label")
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "Главная"))
+        self.btn_add_new.setText(_translate("MainWindow", "Добавить запись"))
+        self.btn_result.setText(_translate("MainWindow", "Сводка"))
+        self.btn_balance.setText(_translate("MainWindow", "Баланс"))
+        self.btn_exit.setText(_translate("MainWindow", "Выход"))
+        self.label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">Расходы</span></p><p align=\"center\"><span style=\" font-size:18pt;\">Доходы</span></p></body></html>"))
