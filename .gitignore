@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+# my ignored files
+.spend_history.db
+spend_history.db/
+
 # Distribution / packaging
 .Python
 build/
